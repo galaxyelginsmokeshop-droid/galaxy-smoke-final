@@ -2,7 +2,9 @@ import React from "react";
 import { useCart } from "@/context/CartContext";
 
 export default function CartPage() {
-  const { cartItems, removeFromCart } = useCart();
+  const { cartItems } = useCart() || {}; // ✅ fallback to empty object
+
+if (!cartItems) return <p>Your cart is loading or empty.</p>;
 
   return (
     <div className="p-8">
