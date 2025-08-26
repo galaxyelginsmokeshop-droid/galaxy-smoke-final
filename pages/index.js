@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-export default function HomePage() {
+export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-4">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
