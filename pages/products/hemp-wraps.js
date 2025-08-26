@@ -1,30 +1,31 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const products = [
-  { name: "Sample Product 1", image: "/images/sample1.jpg" },
-  { name: "Sample Product 2", image: "/images/sample2.jpg" },
-  { name: "Sample Product 3", image: "/images/sample3.jpg" }
+  {
+    name: "Hemp-Wraps Example",
+    image: "/products/hemp-wraps.jpg",
+  },
 ];
 
-export default function HempWraps() {
+export default function HempWrapsPage() {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Hemp Wraps</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <main className="p-8">
+      <h1 className="text-2xl font-bold mb-4">Hemp Wraps</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {products.map((product, index) => (
           <div key={index} className="border p-4 rounded shadow">
             <Image
               src={product.image}
               alt={product.name}
               width={300}
-              height={300}
-              className="object-cover w-full h-64"
+              height={200}
+              className="w-full h-auto object-cover mb-2"
             />
-            <p className="mt-2 text-lg font-semibold">{product.name}</p>
+            <p className="text-center">{product.name}</p>
           </div>
         ))}
       </div>
-    </div>
+    </main>
   );
 }
