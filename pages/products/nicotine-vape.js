@@ -1,1 +1,0 @@
-// Nicotine vape category page placeholder
